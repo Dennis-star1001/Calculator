@@ -26,6 +26,8 @@ class Calculator {
             squRoot: '#squr-root',
             deleteAll: '#delete-all',
             del: '#del',
+            naviToggle: '#navi-toggle',
+            nav: '#nav',
 
         }
 
@@ -46,6 +48,8 @@ class Calculator {
                     squRoot: document.querySelector(DOMString.squRoot).innerHTML,
                     deleteAll: document.querySelector(DOMString.deleteAll).innerHTML,
                     del: document.querySelector(DOMString.del).innerHTML,
+                    naviToggle: document.querySelector(DOMString.naviToggle),
+                    nav: document.querySelector(DOMString.nav).style.display = 'none',
 
                     zero: DOMString.Zero,
                     one: DOMString.numberOne,
@@ -66,6 +70,8 @@ class Calculator {
                     squRoot: DOMString.squRoot,
                     deleteAll: DOMString.deleteAll,
                     del: DOMString.del,
+                    naviToggle: DOMString.naviToggle,
+                    nav: DOMString.nav,
                 }
             }
         }
@@ -248,6 +254,11 @@ class Calculator {
             brain.result();
         }
 
+        const naviToggleFunction = () => {
+          document.querySelector(dom.nav).style.display = 'block';
+        }
+
+
         document.querySelector(dom.plus).addEventListener('click', addFunction);
         document.querySelector(dom.minus).addEventListener('click', subtractFunction);
         document.querySelector(dom.divide).addEventListener('click', divisionFunction);
@@ -271,6 +282,8 @@ class Calculator {
         document.querySelector(dom.seven).addEventListener('click', sevenFunction);
         document.querySelector(dom.eight).addEventListener('click', eightFunction);
         document.querySelector(dom.nine).addEventListener('click', nineFunction);
+
+        document.querySelector(dom.naviToggle).addEventListener('click', naviToggleFunction);
 
         document.querySelector(dom.equalTo).addEventListener('click', calculate);
 
