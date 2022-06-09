@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: right;
+
+    &__link {
+        padding: 20px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        list-style: none;
+    }
+    &__link li a{
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        padding-bottom: 5px;
+        border-bottom: 3px solid black;
+    }
+}
+
+.section-1 {
+    height: 50%;
+
+}
+
+.section-2 {
+
+
+    // align-items:center;  
+}

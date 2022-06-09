@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar">
+
+            <ul class="navbar__link">
+                <li><a href="#">History</a></li>
+            </ul>
+        </nav>
+        <div class="section-1">
+            <div class="output">
+                <div class="output__num">
+                    <div id="previous-operand" class="output__previous-operand"></div>
+                    <div id="current-operand" class="output__current-operand">0</div>
+                </div>
+
+            </div>
+           
+        </div>
+        <div class="section-2">
+            <div class="controller">
+                <button type="text" data-operation id="multiplication" class="controller__btn multiplication" data-action="multiply">&#xd7;</button>
+                <button type="text" data-operation id="minus" class="controller__btn minus" data-action="substract">&#x2212;</button>
+                <button type="text" data-operation id="plus" class="controller__btn plus" data-action="add">&#x2b;</button>
+                <button type="text" data-operation id="division" class="controller__btn division" data-action="divide">&#xf7;</button>
+                <button type="text" delete-data id="del" class="controller__btn">DEL</button>
+                <button type="text" delete-all-data id="delete-all" class="controller__btn" data-action="decimal">AC</button>
+                <button type="text" data-operation id="squr-root" class="controller__btn squr-root"> 
+                    &#8730;x</button>
+                <button type="text" data-equals id="equal-to" class="controller__btn equal-to" data-action="calculate">&#x3d;</button>
+                <!-- &#xb2; -->
+               
+                <button type="text" numberBtn id='dot' class="controller__btn">.</button>
+                <button type="text" numberBtn id="zero" class="controller__btn">0</button>
+                <button type="text" numberBtn id="one" class="controller__btn">1</button>
+                <button type="text" numberBtn id="two" class="controller__btn">2</button>
+                <button type="text" numberBtn id="three" class="controller__btn">3</button>
+                <button type="text" numberBtn id="four" class="controller__btn">4</button>
+                <button type="text" numberBtn id="five" class="controller__btn">5</button>
+                <button type="text" numberBtn id="six" class="controller__btn">6</button>
+                <button type="text" numberBtn id="seven" class="controller__btn">7</button>
+                <button type="text" numberBtn id="eight" class="controller__btn">8</button>
+                <button type="text" numberBtn id="nine" class="controller__btn">9</button>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="./Js/index.js"></script>
+</body>
+
+</html>
