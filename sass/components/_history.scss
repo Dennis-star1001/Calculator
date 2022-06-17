@@ -1,0 +1,39 @@
+.navbar__history {
+    // border: 1px solid black;
+    background-color: rgb(237, 237, 237);
+    padding: 2rem 3rem;
+    margin: 55px 20px;
+    position: absolute;
+    height: 85vh;
+    width: 25vw;
+
+    @include respond(tab-land) {
+        height: 85vh;
+        width: 25vw;
+    }
+
+    @include respond(phone) {
+        height: 85vh;
+        width: 30vw;
+    }
+
+     @include respond(small-phone) {
+        height: 85vh;
+        width: 100vw;
+        margin: 55px 0;
+    }
+
+    &--list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &--ul {
+        color: $color-black;
+        font-size: 1.5rem;
+        list-style: none;
+        text-align: center;
+        padding-right: 5px;
+    }
+}

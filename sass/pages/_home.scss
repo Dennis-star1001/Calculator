@@ -1,0 +1,19 @@
+.main {
+   
+    @include respond(small-phone) {
+        width: 100vw;
+    }
+}
+
+.section-1 {
+    height: 40%;
+    width: 100%;
+
+}
+
+.section-2 {
+    height: 50%;
+    width: 100%;
+
+    // align-items:center;  
+}

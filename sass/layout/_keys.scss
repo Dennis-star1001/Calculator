@@ -1,0 +1,64 @@
+.controller {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 80px);
+    grid-auto-flow: column;
+    padding: 10px 0;
+    width: 70%;
+
+
+
+
+    @include respond(tab-land) {
+        grid-gap: 2px;
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 50px);
+        grid-auto-flow: row;
+        padding: 10px 1px;
+        width: 69%;
+    }
+
+
+
+    @include respond(tab-port) {
+        grid-gap: 2px;
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 50px);
+        grid-auto-flow: row;
+        padding: 10px 1px;
+        width: 72%;
+    }
+
+  
+    @include respond(phone) {
+        grid-gap: 2px;
+      
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 50px);
+        grid-auto-flow: row;
+        padding: 10px 1px;
+        width: 61%;
+    }
+    @include respond(small-phone) {
+        grid-gap: 1px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 50px);
+        grid-auto-flow: row;
+        padding: 10px 1px;
+        width: 100%;
+    }
+
+
+
+    .equal-to {
+        order: 6;
+    }
+}
+
+.calculator__keys {
+    display: grid;
+    /* other necessary CSS */
+}

@@ -1,0 +1,54 @@
+.controller {
+
+    &__btn {
+        border: none;
+        font-size: 2rem;
+        font-weight: 300;
+
+        &:hover {
+            background-color: ghostwhite;
+            cursor: pointer;
+        }
+
+        &:focus {
+            background-color: #1da1f2;
+            color: white;
+        }
+    }
+
+
+}
+
+.navbar {
+
+    &__btn {
+        height: fit-content;
+        padding: .2rem 1rem;
+        margin: .5rem 2rem;
+        background: #1da1f2;
+        border-radius: 5px;
+        color: white;
+        border: none;
+
+
+        &:hover {
+            cursor: pointer;
+          
+        }
+       
+    }
+    &__clearHistory{
+        height: fit-content;
+        padding: .2rem 1rem;
+        margin: .5rem 2rem;
+        background: #1da1f2;
+        border-radius: 5px;
+        color: white;
+        border: none;
+
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

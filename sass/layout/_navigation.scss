@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    height: 10%;
+
+    @include respond(small-phone) {
+        width: 100%;
+    }
+
+
+    // @include respond(tab-port) {
+    //     width: 90%;
+    // }
+
+
+   
+
+
+}
