@@ -17,7 +17,7 @@
         width: 30vw;
     }
 
-     @include respond(small-phone) {
+    @include respond(small-phone) {
         height: 85vh;
         width: 100vw;
         margin: 55px 0;
@@ -31,9 +31,18 @@
 
     &--ul {
         color: $color-black;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         list-style: none;
         text-align: center;
-        padding-right: 5px;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #DCDCDC;
+    }
+
+    &--li {
+        width: 50%;
     }
 }

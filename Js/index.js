@@ -96,7 +96,7 @@ class Calculator {
             clearHistory: () => {
                 history.length = 0;
                 let clearHistory = history.length;
-                document.querySelector('#history').innerHTML = clearHistory;
+                document.querySelector('#history').innerHTML = '';
             },
 
             clearAll: () => {
@@ -133,6 +133,7 @@ class Calculator {
                 }
 
 
+
                 console.log(numbers, 'input');
 
             },
@@ -141,7 +142,11 @@ class Calculator {
                 if (numbers != '') {
                     inputs.push(parseFloat(numbers));
                 }
-                inputs.push(operator);
+
+                if (!isNaN(inputs[inputs.length - 1])) {
+                    inputs.push(operator);
+                }
+
 
                 console.log(`Input : ${inputs}`);
 
@@ -150,7 +155,10 @@ class Calculator {
 
             result: () => {
                 if (numbers == '') {
-                    inputs.push(numbers.substring(0, numbers.length));
+                    // inputs.push(numbers.substring(0, numbers.length));
+                    numbers = ''
+                } else if (numbers == null) {
+                    inputs.pop()
                 } else {
                     inputs.push(parseFloat(numbers));
                     numbers = '';
@@ -166,6 +174,9 @@ class Calculator {
                                 inputs[i + 2] = null;
                                 inputs.pop();
                                 output = inputs[i];
+                            } else if (inputs[i + 1] != '+') {
+                                inputs[i + 1] = null;
+                                inputs.pop();
                             } else {
                                 output += inputs[i] + inputs[i + 2];
                             }
@@ -183,7 +194,7 @@ class Calculator {
                             if (isNaN(inputs[i + 2])) {
                                 inputs[i + 2] = null;
                                 inputs.pop();
-                                output = inputs[i];
+                                output *= inputs[i];
                             } else {
                                 output += inputs[i] * inputs[i + 2];
                             }
@@ -217,10 +228,12 @@ class Calculator {
 
 
                     } else if (i > 0 && i % 2 == 0 && i < inputs.length - 1) {
-                        document.querySelector('#current-operand').innerHTML = inputs.join("");
+
+                        document.querySelector('#current-operand').innerHTML = `input: ${inputs.join("")}`;
                         if (inputs[i + 1] == '+') {
                             if (isNaN(inputs[i + 2])) {
                                 inputs[i + 2] = null;
+
                                 inputs.pop();
                             } else {
                                 output += inputs[i + 2];
@@ -269,10 +282,24 @@ class Calculator {
 
                 console.log(inputs);
 
+                if (inputs != 0) {
+                    history.push(inputs.join("") + ' = ' + output + '\n');
+                } else if (inputs == 0) {
+                    inputs = null;
+                    history.push(inputs.join("") + ' = ' + output + '\n');
+                }
 
-                history.push(inputs.join("") + ' = ' + output + '\n\n\n\n');
+
                 console.log(`${history}`);
-                document.querySelector('#history').innerHTML = `${history.join("")}`;
+
+                var html;
+                if (history.length != 0) {
+                    html = ` <li id="history" class="navbar__history--li">${history.join("")}</li>`
+                    document.querySelector('#history').innerHTML = html;
+                }
+
+
+
                 console.log(output);
                 output = 0;
             }
@@ -417,6 +444,7 @@ class Calculator {
         document.querySelector(dom.plus).addEventListener('click', addFunction);
         document.querySelector(dom.minus).addEventListener('click', subtractFunction);
         document.querySelector(dom.divide).addEventListener('click', divisionFunction);
+        document.querySelector(dom.multiply).addEventListener('click', multiplicationFunction);
         document.querySelector(dom.historyClear).addEventListener('click', ClearAllHistory);
 
 
