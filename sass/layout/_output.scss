@@ -26,6 +26,7 @@
     }
     @include respond(small-phone) {
         width: 100%;
+       
     }
     &__num {
         display: flex;

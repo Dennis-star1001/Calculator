@@ -45,7 +45,7 @@
     @include respond(small-phone) {
         grid-gap: 1px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 50px);
+        grid-template-rows: repeat(5, 76px);
         grid-auto-flow: row;
         padding: 10px 1px;
         width: 100%;

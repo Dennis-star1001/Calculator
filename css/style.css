@@ -109,7 +109,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     .navbar__history {
       height: 85vh;
       width: 30vw; } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 25.75em) {
     .navbar__history {
       height: 85vh;
       width: 100vw;
@@ -164,11 +164,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
       grid-auto-flow: row;
       padding: 10px 1px;
       width: 61%; } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 25.75em) {
     .controller {
       grid-gap: 1px;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(5, 50px);
+      grid-template-rows: repeat(5, 76px);
       grid-auto-flow: row;
       padding: 10px 1px;
       width: 100%; } }
@@ -184,7 +184,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   justify-content: right;
   position: relative;
   height: 10%; }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 25.75em) {
     .navbar {
       width: 100%; } }
 
@@ -205,7 +205,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 37.5em) {
     .output {
       width: 61%; } }
-  @media only screen and (max-width: 25em) {
+  @media only screen and (max-width: 25.75em) {
     .output {
       width: 100%; } }
   .output__num {
@@ -222,12 +222,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
     color: rgba(61, 59, 59, 0.75);
     font-size: 3rem; }
 
-@media only screen and (max-width: 25em) {
+@media only screen and (max-width: 25.75em) {
   .main {
     width: 100vw; } }
 
 .section-1 {
-  height: 40%;
+  height: 50%;
   width: 100%; }
 
 .section-2 {
